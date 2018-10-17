@@ -1,182 +1,260 @@
 body {
 	background-image: url("../images/bg_body.jpg");
+	height: 100%;
+	width: 100%;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	line-height: normal;
+	color: #d7cfc8;
+	cursor: default;
 }
 
-header {
-	display: flex;
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	min-height: 100%;
 }
 
 a {
-	color: #ffffff;
+	color: #e8d1a4;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2 {
+	line-height: normal;
+	font-weight: 400;
 }
 
 h1 {
-	margin-left: 50px;
-	font-family: Georgia, sans-serif;
 	font-size: 22px;
-	padding: 20px 0;
-	color: gold;
-	font-weight: 400;
+	color: #ead4aa;
+	margin-bottom: 16px;
+}
 
+h2 {
+	font-size: 18px;
+	color: #fff68d;
+	margin-bottom: 15px;
+}
+
+article {
+	margin-bottom: 40px;
 }
 
 /* ================header======================== */
 
-.lang-list {
+header {
+	position: relative;
+	height: 160px;
+	margin-bottom: 40px;
+}
+
+header .logo {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+header .logo img {
+	display: block;
+	width: 223px;
+	height: auto;
+	margin-left: 20px;
+}
+
+header .mainmenu {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+header .mainmenu .menu-list {
 	display: flex;
-	flex-direction: row;
-	font-family: Verdana,  sans-serif;
-	font-size: 11pt;
+	list-style: none;
+	background: #ffffff;
+	border-radius: 4px;
+}
+
+header .mainmenu .menu-item {
+	color: #461500;
+}
+
+header .mainmenu .menu-item.active {
+	background: url("../images/bg_menu-item-active.png") center 0 no-repeat;
+}
+
+header .mainmenu .menu-item a {
+	display: block;
+	text-decoration: none;
+	width: 117px;
+	height: 39px;
+	color: inherit;
+	text-align: center;
+	line-height: 39px;
+	font-family: Georgia, serif;
+	font-size: 14px;
+}
+
+header .mainmenu .menu-item.active a {
+	cursor: default;
+}
+
+header .lang-list {
 	position: absolute;
-	margin-top: 40px;
-	margin-left: 120px;
-	color: gold;
+	left: 20px;
+	top: 40px;
 }
 
-.lang-item::after {
-	padding: 0 10px;
-	content: '|';
-	color: white;
-}
-
-.lang-item:last-child::after {
-	content: '';
-}
-
-.auth {
-	position: absolute;
-	margin-top: 40px;
-	right: 120px;
-	font-family: Verdana,  sans-serif;
-	font-size: 11pt;
-}
-.auth-link.signin a {
-	color: gold;
-}
-
-.signin::after {
-	padding: 0 10px;
-	content: '|';
+header .lang-list a {
 	color: #ffffff;
 }
 
-.mainmenu .menu-list {
-	display: flex;
-	flex-direction: row;
-	font-family: Verdana,  sans-serif;
-	font-size: 11pt;
-	position: absolute;
-	margin-top: 150px;
-	margin-left: 470px;
-	border: 1px solid gold;
-	background-color: #ffffff;
-	height: 40px;
-	border-radius: 5px;
-}
-
-.mainmenu .menu-item {
-	display: flex;
-	justify-content: space-around;
-	width: 160px;
-	align-items: center;
-}
-
-.menu-item a {
-	color: black;
+header .lang-list .lang-item:nth-child(3) a {
+	color: #e8d1a4;
 	text-decoration: none;
 }
-
-.logo {
-	margin-top: 100px;
-	margin-left: 140px;
-	position: absolute;
+header .lang-list .lang-item {
+	display: inline-block;
+	position: relative;
+	margin-right: 16px;
+	color: #e8d1a4;
 }
 
-.active {
-	background-image: url("../images/bg_menu-item-active.png");
+header .lang-list .lang-item::before {
+	content: '|';
+	position: absolute;
+	left: -12px;
+	top: 0;
+	color: #ffffff;
+}
+
+header .lang-list .lang-item:first-child::before {
+	display: none;
+}
+
+
+header .auth {
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	color: #ffffff;
+}
+
+header .auth .auth-link {
+	display: inline-block;
+	position: relative;
+	margin-right: 16px;
+}
+
+header .auth .auth-link::before {
+	content: '|';
+	position: absolute;
+	left: -12px;
+	top: 0;
+	color: #ffffff;
+}
+
+header .auth .auth-link:first-child::before {
+	display: none;
+}
+
+header .auth-link a {
+	color: inherit;
+}
+
+header .auth-link.signin {
+	color: #e8d1a4;
 }
 
 /* =======================/header========================= */
 
 /* ========================main=========================== */
 
-.promo {
-	background: url("../images/bg_about.png") no-repeat 35px 40px, url("../images/bg_promo.png");
-	margin-top: 240px;
-	width: 1230px;
-	display: block;
-	height: 155px;
-	margin-left: 100px;
-	padding-left: 100px;
+main {
+	height: 890px;
+}
+
+main .promo {
+	background:
+			url("../images/bg_about.png") no-repeat 56px center,
+			url("../images/bg_promo.png") repeat 0 0;
 	border-radius: 10px;
+	font-size: 14px;
+	font-style: italic;
+	color: #f9da5a;
+	padding: 20px;
+	padding-left: 144px;
+	font-family: Georgia, serif;
+	line-height: 22px;
+	margin-bottom: 54px;
 }
 
-
-
-.article {
-	margin-top: 45px;
+main .article {
+	position: relative;
+	padding-left: 144px;
 }
 
-.article img {
-	float: left;
-	margin-left: 110px;
-}
-
-.article h2 {
-	margin-left: 250px;
-	color: gold;
-	font-size: 18px;
-
-}
-
-.article p {
-	margin-left: 250px;
-	width: 1100px;
-}
-
-.article p:nth-of-type(1) {
-	margin-top: 20px;
+main .article img {
+	position: absolute;
+	width: 100px;
+	height: auto;
+	left: 20px;
+	top: 50%;
+	margin-top: -32px;
 }
 
 /* ========================/main=========================== */
 
 /* =======================footer=========================== */
 
-.footer {
-	display: flex;
-	margin: 0 100px;
-	border-top: 1px solid gold;
-	padding: 45px 20px 20px 10px;
-
+footer {
+	position: relative;
+	box-sizing: border-box;
+	width: 1000px;
+	margin: -76px auto 0;
+	height: 76px;
+	border-top: 1px solid rgba(215, 182, 73, 0.44);
+	padding: 40px 20px 0;
+	color: #f9da5a;
 }
 
-.copyright{
-	font-family: Verdana, sans-serif;
-	color:  gold;
-	font-size: 11px;
-	font-weight: 400;
-	line-height: 16px;
-}
-
-.footermenu .menu-list {
-	display: flex;
-	padding-left: 400px;
-}
-
-.footermenu .menu-item::after {
-	content: '|';
-	color: white;
-	padding: 0 10px;
-}
-
-.footermenu .menu-item:last-child::after {
-	content: "";
-}
-
-.footermenu .menu-item a {
-	font-family: Verdana, sans-serif;
-	font-size: 11px;
-	font-weight: 400;
+footer .footermenu {
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	white-space: nowrap;
 	color: #ffffff;
+}
+
+footer .footermenu .menu-list {
+	list-style: none;
+}
+
+footer .footermenu .menu-item {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 16px;
+}
+
+footer .footermenu .menu-item a {
+	color: inherit;
+}
+
+footer .footermenu .menu-item::before {
+	content: '|';
+	position: absolute;
+	left: -12px;
+	top: 0;
+	color: #ffffff;
+}
+
+footer .footermenu .menu-item:first-child::before {
+	display: none;
 }
 /* ======================/footer=========================== */
