@@ -34,6 +34,7 @@ h1 {
 	font-size: 22px;
 	color: #ead4aa;
 	margin-bottom: 16px;
+	font-style: normal;
 }
 
 h2 {
@@ -136,7 +137,6 @@ header .lang-list .lang-item::before {
 header .lang-list .lang-item:first-child::before {
 	display: none;
 }
-
 
 header .auth {
 	position: absolute;
